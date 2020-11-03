@@ -115,11 +115,6 @@ class WC_Settings_Advanced_Test extends WC_Settings_Unit_Test_Case {
 			'woocommerce_logout_endpoint'                  => 'text',
 		);
 
-		if ( ! $site_is_https ) {
-			$expected['woocommerce_force_ssl_checkout']   = 'checkbox';
-			$expected['woocommerce_unforce_ssl_checkout'] = 'checkbox';
-		}
-
 		$this->assertEquals( $expected, $settings_ids_and_types );
 	}
 
